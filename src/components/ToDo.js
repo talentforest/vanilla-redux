@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from "react-redux"
-import { actionCreators } from "../store";
+import { remove } from "../store";
 import { Link } from "react-router-dom"
 
 function ToDo({text, deleteBtn, id}) {
@@ -17,7 +17,7 @@ function ToDo({text, deleteBtn, id}) {
 // 스토어에서 버튼삭제액션 가져오기
 function mapDispatchToProps(dispatch, ownProps) {
   return {
-    deleteBtn: () => dispatch(actionCreators.deleteToDo(ownProps.id))
+    deleteBtn: () => dispatch(remove(ownProps.id))
   };
 }
 
