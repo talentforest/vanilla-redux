@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 function Detail({ toDo }) {
+  // ? 기능은 Javacript Optional Chaining!
   return (
     <>
       <h1>{toDo?.text}</h1>
